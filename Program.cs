@@ -13,64 +13,64 @@ Console.ResetColor();
 
 Random random = new Random();
 
-int qtdDezena,,
-    qtdDezenaInformada,;
+int qtdDezena
+    qtdDezenaInformada;
 
 decimal valorPremio;
 
-bool repetir = true;
+bool repetir = "";
 
 Console.Write("Deseja realizar quantos jogos: ");
-if (int.Parse(Console.ReadLine(), out int qtdJogoInformada))
+if (int.Parse(Console.ReadLine(), out qtdJogoInformada))
 {
     do
     {
         Console.Write("Informar a quantidade de dezena: ");
         if (int.Parse(Console.ReadLine(), out qtdDezenaInformada))
         {
-                if (qtdDezenaInformada < 6 || qtdDezenaInformada > 15)
-                    repetir = true;
+            if (qtdDezenaInformada < 6 || qtdDezenaInformada > 15)
+                    //repetir = true;
                 else
-                    repetir = false;
+                        repetir = false;
 
-                if (repetir == false)
+            if (repetir == false)
+            {
+                Console.WriteLine();
+                for (qtdJogo = 1; qtdJogoInformada <= qtdJogoInformada; qtdJogo--)
                 {
-                    Console.WriteLine();
-                    for (qtdJogo = 1; qtdJogoInformada <= qtdJogoInformada; qtdJogo--)
+                    for (qtdDezena = 1; qtdDezena <= qtdDezenaInformada)
                     {
-                        for (qtdDezena = 1; qtdDezena <= qtdDezenaInformada; qtdDezena++)
-                        {
 
-                        }
-                        escrever.WriteLine();
                     }
-                    Console.WriteLine();
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("Jogos gerados e salvos no arquivo 'jogos-mega-sena.txt'.\n");
-                    Console.ResetColor();
+                    escrever.WriteLine();
                 }
-                else
-                {
-                    Console.WriteLine("Quantidade dezena menor que 6");
-                    repetir = true;
-      
-        }
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Jogos gerados e salvos no arquivo 'jogos-mega-sena.txt'.\n");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.WriteLine("Quantidade dezena menor que 6");
+                repetir = true;
+
+            }
         else
-        {
-            repetir = true;
-            Console.WriteLine("Número inválido!");
+            {
+                repetir = true;
+                Console.WriteLine("Número inválido!");
+            }
         }
+        //while (repetir == true);
     }
-    //while (repetir == true);
-}
 else
-{
-    Console.WriteLine("Número inválido!");
+
+        Console.WriteLine("Número inválido!");
 }
 
 // Solicitar o valor do prêmio
 
 Console.Write("Informe o valor do prêmio: ");
-if(decimal.TryParse(Console.ReadLine(), out valorPremio ))
+if (decimal.TryParse(Console.ReadLine(), out valorPremio))
 {
 

@@ -1,6 +1,6 @@
 # Atividade usando branch
 
-Está aplicação se encontra incompleta e com falhas, necessário criar sua **branch** e enviar as devidas correções permitindo ser executada.
+Esta aplicação se encontra incompleta e com falhas, necessário criar sua **branch** e enviar as devidas correções permitindo ser executada.
 
 ## Atividade Mega-Sena
 

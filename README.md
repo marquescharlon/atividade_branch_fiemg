@@ -1,6 +1,6 @@
 # Atividade usando branch
 
-Esta aplicação se encontra incompleta e com falhas, necessário criar sua **branch** e enviar as devidas correções permitindo ser executada.
+Está aplicação se encontra incompleta e com falhas, necessário criar sua **branch** e enviar as devidas correções permitindo ser executada.
 
 ## Atividade Mega-Sena
 
@@ -9,9 +9,10 @@ Exemplo: 51-31-20-38-34-42
 
 **2ª FASE:** Criar um bolão, no qual, permite o usuário informar a quantidade de jogos de 6 dezenas que deseja fazer 
 
-**3ª FASE:** Criar o jogo no qual permite o usuário informar a quantidade de jogos e quantidade de dezenas. Exemplo:
+**3ª FASE:** Criar o jogo no qual permite o usuário informar a quantidade de jogos e quantidade de dezenas.
 
 ```
+Exemplo:
 	2 jogos de 7 dezenas 	20-30-54-22-24-52-60
 				20-22-35-15-40-22-10
 
@@ -37,4 +38,4 @@ Exemplo: 51-31-20-38-34-42
 
 **7ª FASE:** Determinar que 75% do prêmio será para quem acertar as 6 dezenas, 15% para quem acertar 5 dezenas e 10% para quem acertar 4 dezenas.
 
-<!-- **8ª FASE:** Permitir que o sistema realize o sorteio de 6 dezenas aleatórias e dizer se deu ganhador: Mega-Sena, Quina e Quadra. -->
+**8ª FASE:** Permitir que o sistema realize o sorteio de 6 dezenas aleatórias e dizer se deu ganhador: Mega-Sena, Quina e Quadra.

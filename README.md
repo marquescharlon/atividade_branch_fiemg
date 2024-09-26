@@ -1,8 +1,8 @@
 # Atividade usando branch
 
-## Atividade Mega-Sena
+Está aplicação se encontra incompleta e com falhas, necessário criar sua **branch** e enviar as devidas correções permitindo ser executada.
 
-O jogo está incompleto e com falhas, necessário criar sua branch e enviar as devidas correções com à aplicação capaz de ser executada.
+## Atividade Mega-Sena
 
 **1ª FASE:** Criar um programa que gere de forma aleatória as 6 dezenas. 
 Exemplo: 51-31-20-38-34-42

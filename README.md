@@ -38,4 +38,4 @@ Exemplo:
 
 **7ª FASE:** Determinar que 75% do prêmio será para quem acertar as 6 dezenas, 15% para quem acertar 5 dezenas e 10% para quem acertar 4 dezenas.
 
-**8ª FASE:** Permitir que o sistema realize o sorteio de 6 dezenas aleatórias e dizer se deu ganhador: Mega-Sena, Quina e Quadra.
+<!-- **8ª FASE:** Permitir que o sistema realize o sorteio de 6 dezenas aleatórias e dizer se deu ganhador: Mega-Sena, Quina e Quadra. -->

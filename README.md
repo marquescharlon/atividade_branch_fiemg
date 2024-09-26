@@ -9,10 +9,9 @@ Exemplo: 51-31-20-38-34-42
 
 **2ª FASE:** Criar um bolão, no qual, permite o usuário informar a quantidade de jogos de 6 dezenas que deseja fazer 
 
-**3ª FASE:** Criar o jogo no qual permite o usuário informar a quantidade de jogos e quantidade de dezenas.
+**3ª FASE:** Criar o jogo no qual permite o usuário informar a quantidade de jogos e quantidade de dezenas. Exemplo:
 
 ```
-Exemplo:
 	2 jogos de 7 dezenas 	20-30-54-22-24-52-60
 				20-22-35-15-40-22-10
 

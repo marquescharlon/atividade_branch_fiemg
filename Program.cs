@@ -1,5 +1,4 @@
 ﻿using System.IO;
-using System.Security.Cryptography;
 
 Console.Clear();
 
@@ -39,21 +38,30 @@ if (int.TryParse(Console.ReadLine(), out qtdJogoInformada))
             if (!repetir)
             {
                 Console.WriteLine();
-                for (qtdJogo = 1; qtdJogo <= qtdJogoInformada; qtdJogo++)
+                using (StreamWriter escrever = new StreamWriter("jogos-mega-sena.txt"))
                 {
-                    for (qtdDezena = 1; qtdDezena <= qtdDezenaInformada; qtdDezena++)
+                    for (qtdJogo = 1; qtdJogo <= qtdJogoInformada; qtdJogo++)
                     {
-                        numRandom = random.Next(1, 61);
-                        if (qtdDezena != qtdDezenaInformada)
-                            Console.Write($"{numRandom}-");
-                        else
-                            Console.WriteLine(numRandom);
+                        for (qtdDezena = 1; qtdDezena <= qtdDezenaInformada; qtdDezena++)
+                        {
+                            numRandom = random.Next(1, 61);
+                            if (qtdDezena != qtdDezenaInformada)
+                            {
+                                Console.Write($"{numRandom}-");
+                                escrever.Write($"{numRandom}-");
+                            }
+                            else
+                            {
+                                Console.WriteLine(numRandom);
+                                escrever.WriteLine(numRandom);
+                            }
+                        }
                     }
                 }
-                // Console.WriteLine();
-                // Console.ForegroundColor = ConsoleColor.Yellow;
-                // Console.WriteLine("Jogos gerados e salvos no arquivo 'jogos-mega-sena.txt'.\n");
-                // Console.ResetColor();
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Jogos gerados e salvos no arquivo 'jogos-mega-sena.txt'.\n");
+                Console.ResetColor();
             }
             else
             {

@@ -39,7 +39,7 @@ do
 
 do
 {
-    Console.Write("Informar a quantidade de dezenas (entre 6 e 15): ");
+    Console.Write("Informe a quantidade de dezenas (entre 6 e 15): ");
     if (int.TryParse(Console.ReadLine(), out qtdDezenaInformada))
     {
         if (qtdDezenaInformada < 6 || qtdDezenaInformada > 15)
@@ -66,15 +66,15 @@ do
                         }
                         else
                         {
-                            Console.WriteLine(numRandom);
-                            escrever.WriteLine(numRandom);
+                            Console.WriteLine($"{numRandom:D2}");
+                            escrever.WriteLine($"{numRandom:D2}");
                         }
                     }
                 }
             }
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("Jogos gerados e salvos no arquivo 'jogos-mega-sena.txt'.");
+            Console.WriteLine("Jogo(s) gerado(s) e salvo(s) no arquivo 'jogos-mega-sena.txt'.");
             Console.ResetColor();
             Console.WriteLine();
         }

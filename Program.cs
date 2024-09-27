@@ -18,7 +18,10 @@ int qtdDezena,
     qtdJogoInformada,
     numRandom;
 
-decimal valorPremio;
+decimal valorPremio,
+        valorPremio6Dzn,
+        valorPremio5Dzn,
+        valorPremio4Dzn;
 
 bool repetir = true;
 
@@ -81,7 +84,20 @@ else
     Console.WriteLine("Número inválido!");
 
 // Solicitar o valor do prêmio
+Console.Write("Informe o valor do prêmio: ");
+if (decimal.TryParse(Console.ReadLine(), out valorPremio))
+{
+    valorPremio6Dzn = valorPremio * 0.75m;
+    valorPremio5Dzn = valorPremio * 0.15m;
+    valorPremio4Dzn = valorPremio * 0.10m;
 
-// Console.Write("Informe o valor do prêmio: ");
-// if (decimal.TryParse(Console.ReadLine(), out valorPremio))
-// {
+    Console.WriteLine();
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("Distribuição do prêmio:");
+    Console.ResetColor();
+    Console.WriteLine($"- {valorPremio6Dzn:C} para quem acertar 6 dezenas;");
+    Console.WriteLine($"- {valorPremio5Dzn:C} para quem acertar 5 dezenas;");
+    Console.WriteLine($"- {valorPremio4Dzn:C} para quem acertar 4 dezenas.");
+}
+else
+    Console.WriteLine("Valor inválido!");

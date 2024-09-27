@@ -46,12 +46,25 @@ using (StreamWriter escrever = new StreamWriter("Jogos-mega.txt"))
                         Console.WriteLine();
                         for (qtdJogo = 1; qtdJogoInformada <= qtdJogoInformada; qtdJogo--)
                         {
-                            for (qtdDezena = 1; qtdDezena <= qtdDezenaInformada)
+                            Console.Write("\x0A" + qtdJogo + "º jogo: ");
+                            HashSet<int> un = new HashSet<int>();
+                            string num = "";
+                            for (qtdDezena = 1; qtdDezena <= qtdDezenaInformada; qtdDezena++)
+                        {
+                            int rn;
+                            do
                             {
-        
+                                rn = new Random().Next(1, 61);
+                            } while (!un.Add(rn));
+
+                            if (qtdDezena > 1)
+                            {
+                                num += "-";
                             }
-                            Console.WriteLine();
-                            escrever.WriteLine();
+                            num += rn.ToString("D2");
+                        }
+                        Console.WriteLine(num);
+                        escrever.WriteLine(num);
                         }
                         Console.WriteLine();
                         Console.ForegroundColor = ConsoleColor.Yellow;

@@ -18,8 +18,15 @@ int qtdDezena
 
 decimal valorPremio;
 
-bool repetir = "";
+bool repetir = false;
 
+Console.Write("Informe o valor do prêmio: "); // Solicitar o valor do prêmio
+if (!decimal.TryParse(Console.ReadLine(), out valorPremio))
+{
+    Console.WriteLine("número inválido!");
+}
+else
+{
 Console.Write("Deseja realizar quantos jogos: ");
 if (int.Parse(Console.ReadLine(), out qtdJogoInformada))
 {
@@ -29,18 +36,24 @@ if (int.Parse(Console.ReadLine(), out qtdJogoInformada))
         if (int.Parse(Console.ReadLine(), out qtdDezenaInformada))
         {
             if (qtdDezenaInformada < 6 || qtdDezenaInformada > 15)
-                    //repetir = true;
+            {
+                repetir = true;
+            }
                 else
-                        repetir = false;
+                {
+                    repetir = false;
+                }
 
             if (repetir == false)
             {
                 Console.WriteLine();
-                for (qtdJogo = 1; qtdJogoInformada <= qtdJogoInformada; qtdJogo--)
+                for (qtdJogo = 1; qtdJogoInformada <= qtdJogoInformada; qtdJogo++)
                 {
-                    for (qtdDezena = 1; qtdDezena <= qtdDezenaInformada)
+                    for (qtdDezena = 1; qtdDezena <= qtdDezenaInformada; qtdDezena++)
                     {
-
+                        int numero = random.Next(1, 61);
+                        Console.Write(numero.ToString("D2") + " ");
+                        escrever.Write(numero.ToString("D2") + " ");
                     }
                     escrever.WriteLine();
                 }
@@ -61,16 +74,13 @@ if (int.Parse(Console.ReadLine(), out qtdJogoInformada))
                 Console.WriteLine("Número inválido!");
             }
         }
-        //while (repetir == true);
-    }
-else
-
+    } while (repetir == true);
+    else
+    {
         Console.WriteLine("Número inválido!");
+    }
+}
 }
 
-// Solicitar o valor do prêmio
 
-Console.Write("Informe o valor do prêmio: ");
-if (decimal.TryParse(Console.ReadLine(), out valorPremio))
-{
 

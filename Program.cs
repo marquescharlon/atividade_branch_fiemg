@@ -66,7 +66,7 @@ else
 
 Console.Write("Informe o valor do prêmio: ");
 if (double.TryParse(Console.ReadLine(), out valorPremio)){
-    Console.WriteLine($"1° lugar: {valorPremio * 0.75} - 6 dezenas acertadas! \n 2° lugar: {valorPremio * 0.15} - 5 dezenas acertadas! \n 3° lugar: {valorPremio * 0.10} - 4 dezenas acertadas!");
+    Console.WriteLine($"1° lugar: R${valorPremio * 0.75} - 6 dezenas acertadas! \n 2° lugar: R${valorPremio * 0.15} - 5 dezenas acertadas! \n 3° lugar: R${valorPremio * 0.10} - 4 dezenas acertadas!");
 }
 
 

@@ -40,14 +40,17 @@ if (int.TryParse(Console.ReadLine(), out qtdJogoInformada))
                         if(qtdDezena == qtdDezenaInformada)
                             Console.Write(random.Next(1, 61));
                         else
-                            Console.Write(random.Next(1, 61) + "-");
+                            Console.Write(random.Next(1, 61) + " - ");
                     }
+                    Console.WriteLine();
+
                     
                 }
                 Console.WriteLine();
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("Jogos gerados e salvos no arquivo 'jogos-mega-sena.txt'.\n");
                 Console.ResetColor();
+                repetir = false;
             }
         }
         else

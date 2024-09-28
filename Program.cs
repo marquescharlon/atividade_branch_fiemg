@@ -37,7 +37,10 @@ if (int.TryParse(Console.ReadLine(), out qtdJogoInformada))
                 {
                     for (int qtdDezena = 1; qtdDezena <= qtdDezenaInformada; qtdDezena++)
                     {
-                        
+                        if(qtdDezena == qtdDezenaInformada)
+                            Console.Write(random.Next(1, 61));
+                        else
+                            Console.Write(random.Next(1, 61) + "-");
                     }
                     
                 }

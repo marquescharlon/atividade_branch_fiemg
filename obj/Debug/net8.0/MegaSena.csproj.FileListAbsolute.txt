@@ -13,3 +13,11 @@ C:\projetos\atividade_branch\obj\Debug\net8.0\refint\MegaSena.dll
 C:\projetos\atividade_branch\obj\Debug\net8.0\MegaSena.pdb
 C:\projetos\atividade_branch\obj\Debug\net8.0\MegaSena.genruntimeconfig.cache
 C:\projetos\atividade_branch\obj\Debug\net8.0\ref\MegaSena.dll
+D:\Publico\GitHub\atividade_branch_fiemg\obj\Debug\net8.0\MegaSena.GeneratedMSBuildEditorConfig.editorconfig
+D:\Publico\GitHub\atividade_branch_fiemg\obj\Debug\net8.0\MegaSena.AssemblyInfoInputs.cache
+D:\Publico\GitHub\atividade_branch_fiemg\obj\Debug\net8.0\MegaSena.AssemblyInfo.cs
+D:\Publico\GitHub\atividade_branch_fiemg\obj\Debug\net8.0\MegaSena.csproj.CoreCompileInputs.cache
+D:\Publico\GitHub\atividade_branch_fiemg\obj\Debug\net8.0\MegaSena.sourcelink.json
+D:\Publico\GitHub\atividade_branch_fiemg\obj\Debug\net8.0\MegaSena.dll
+D:\Publico\GitHub\atividade_branch_fiemg\obj\Debug\net8.0\refint\MegaSena.dll
+D:\Publico\GitHub\atividade_branch_fiemg\obj\Debug\net8.0\MegaSena.pdb

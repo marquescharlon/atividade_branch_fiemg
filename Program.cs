@@ -13,64 +13,55 @@ Console.ResetColor();
 
 Random random = new Random();
 
-int qtdDezena
-    qtdDezenaInformada;
+int qtdJogoInformada;
+int qtdDezenaInformada;
 
 decimal valorPremio;
 
-bool repetir = "";
+bool repetir = true;
 
 Console.Write("Deseja realizar quantos jogos: ");
-if (int.Parse(Console.ReadLine(), out qtdJogoInformada))
+if (int.TryParse(Console.ReadLine(), out qtdJogoInformada))
 {
     do
     {
         Console.Write("Informar a quantidade de dezena: ");
-        if (int.Parse(Console.ReadLine(), out qtdDezenaInformada))
+        if (int.TryParse(Console.ReadLine(), out qtdDezenaInformada))
         {
-            if (qtdDezenaInformada < 6 || qtdDezenaInformada > 15)
-                    //repetir = true;
-                else
-                        repetir = false;
-
-            if (repetir == false)
-            {
-                Console.WriteLine();
-                for (qtdJogo = 1; qtdJogoInformada <= qtdJogoInformada; qtdJogo--)
+            if (qtdDezenaInformada < 6 || qtdDezenaInformada > 15){
+                    Console.WriteLine("A quantidade de dezenas deve ser pelo menos 6 e no máximo 15!");
+                    repetir = true;
+            }
+            else{
+                for (int qtdJogo = 1; qtdJogo <= qtdJogoInformada; qtdJogo++)
                 {
-                    for (qtdDezena = 1; qtdDezena <= qtdDezenaInformada)
+                    for (int qtdDezena = 1; qtdDezena <= qtdDezenaInformada; qtdDezena++)
                     {
-
+                        
                     }
-                    escrever.WriteLine();
+                    
                 }
                 Console.WriteLine();
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("Jogos gerados e salvos no arquivo 'jogos-mega-sena.txt'.\n");
                 Console.ResetColor();
             }
-            else
-            {
-                Console.WriteLine("Quantidade dezena menor que 6");
-                repetir = true;
-
-            }
+        }
         else
             {
                 repetir = true;
                 Console.WriteLine("Número inválido!");
             }
-        }
-        //while (repetir == true);
-    }
-else
+    }while (repetir == true);
 
-        Console.WriteLine("Número inválido!");
 }
+else
+        Console.WriteLine("Número inválido!");
+
 
 // Solicitar o valor do prêmio
 
-Console.Write("Informe o valor do prêmio: ");
+/*IConsole.Write("Informe o valor do prêmio: ");
 if (decimal.TryParse(Console.ReadLine(), out valorPremio))
-{
+{*/
 

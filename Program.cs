@@ -21,12 +21,12 @@ decimal valorPremio;
 bool repetir = true;
 
 Console.Write("Deseja realizar quantos jogos: ");
-if (int.Parse(Console.ReadLine(), out qtdJogoInformada))
+if (int.TryParse(Console.ReadLine(), out qtdJogoInformada))
 {
     do
     {
         Console.Write("Informar a quantidade de dezena: ");
-        if (int.Parse(Console.ReadLine(), out qtdDezenaInformada))
+        if (int.TryParse(Console.ReadLine(), out qtdDezenaInformada))
         {
             if (qtdDezenaInformada < 6 || qtdDezenaInformada > 15)
                     //repetir = true;
@@ -63,10 +63,10 @@ if (int.Parse(Console.ReadLine(), out qtdJogoInformada))
         }
         //while (repetir == true);
     }
-else
-
-        Console.WriteLine("Número inválido!");
 }
+else
+        Console.WriteLine("Número inválido!");
+
 
 // Solicitar o valor do prêmio
 

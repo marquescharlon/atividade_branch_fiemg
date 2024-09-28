@@ -21,3 +21,10 @@ D:\Publico\GitHub\atividade_branch_fiemg\obj\Debug\net8.0\MegaSena.sourcelink.js
 D:\Publico\GitHub\atividade_branch_fiemg\obj\Debug\net8.0\MegaSena.dll
 D:\Publico\GitHub\atividade_branch_fiemg\obj\Debug\net8.0\refint\MegaSena.dll
 D:\Publico\GitHub\atividade_branch_fiemg\obj\Debug\net8.0\MegaSena.pdb
+D:\Publico\GitHub\atividade_branch_fiemg\bin\Debug\net8.0\MegaSena.exe
+D:\Publico\GitHub\atividade_branch_fiemg\bin\Debug\net8.0\MegaSena.deps.json
+D:\Publico\GitHub\atividade_branch_fiemg\bin\Debug\net8.0\MegaSena.runtimeconfig.json
+D:\Publico\GitHub\atividade_branch_fiemg\bin\Debug\net8.0\MegaSena.dll
+D:\Publico\GitHub\atividade_branch_fiemg\bin\Debug\net8.0\MegaSena.pdb
+D:\Publico\GitHub\atividade_branch_fiemg\obj\Debug\net8.0\MegaSena.genruntimeconfig.cache
+D:\Publico\GitHub\atividade_branch_fiemg\obj\Debug\net8.0\ref\MegaSena.dll

@@ -28,13 +28,11 @@ if (int.TryParse(Console.ReadLine(), out qtdJogoInformada))
         Console.Write("Informar a quantidade de dezena: ");
         if (int.TryParse(Console.ReadLine(), out qtdDezenaInformada))
         {
-            if (qtdDezenaInformada < 6 || qtdDezenaInformada > 15)
-                    //repetir = true;
-                else
-                        repetir = false;
-
-            if (repetir == false)
-            {
+            if (qtdDezenaInformada < 6 || qtdDezenaInformada > 15){
+                    Console.WriteLine("A quantidade de dezenas deve ser pelo menos 6 e no máximo 15");
+                    repetir = true;
+            }
+            else{
                 Console.WriteLine();
                 for (qtdJogo = 1; qtdJogoInformada <= qtdJogoInformada; qtdJogo--)
                 {
@@ -48,12 +46,6 @@ if (int.TryParse(Console.ReadLine(), out qtdJogoInformada))
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("Jogos gerados e salvos no arquivo 'jogos-mega-sena.txt'.\n");
                 Console.ResetColor();
-            }
-            else
-            {
-                Console.WriteLine("Quantidade dezena menor que 6");
-                repetir = true;
-
             }
         }
         else

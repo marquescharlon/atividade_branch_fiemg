@@ -21,7 +21,7 @@ decimal valorPremio;
 bool repetir = "";
 
 Console.Write("Deseja realizar quantos jogos: ");
-if (int.Parse(Console.ReadLine(), out qtdJogoInformada))
+if (int.TryParse(Console.ReadLine(), out qtdJogoInformada))
 {
     do
     {

@@ -13,12 +13,12 @@ Console.ResetColor();
 
 Random random = new Random();
 
-int qtdDezena
-    qtdDezenaInformada;
+int qtdJogoInformada;
+int qtdDezenaInformada;
 
 decimal valorPremio;
 
-bool repetir = "";
+bool repetir = true;
 
 Console.Write("Deseja realizar quantos jogos: ");
 if (int.Parse(Console.ReadLine(), out qtdJogoInformada))
@@ -70,7 +70,7 @@ else
 
 // Solicitar o valor do prêmio
 
-Console.Write("Informe o valor do prêmio: ");
+/*IConsole.Write("Informe o valor do prêmio: ");
 if (decimal.TryParse(Console.ReadLine(), out valorPremio))
-{
+{*/
 

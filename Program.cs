@@ -16,7 +16,7 @@ Random random = new Random();
 int qtdJogoInformada;
 int qtdDezenaInformada;
 
-decimal valorPremio;
+double valorPremio;
 
 bool repetir = true;
 
@@ -64,10 +64,9 @@ if (int.TryParse(Console.ReadLine(), out qtdJogoInformada))
 else
         Console.WriteLine("Número inválido!");
 
+Console.Write("Informe o valor do prêmio: ");
+if (double.TryParse(Console.ReadLine(), out valorPremio)){
+    Console.WriteLine($"1° lugar: {valorPremio * 0.75} - 6 dezenas acertadas! \n 2° lugar: {valorPremio * 0.15} - 5 dezenas acertadas! \n 3° lugar: {valorPremio * 0.10} - 4 dezenas acertadas!");
+}
 
-// Solicitar o valor do prêmio
-
-/*IConsole.Write("Informe o valor do prêmio: ");
-if (decimal.TryParse(Console.ReadLine(), out valorPremio))
-{*/
 

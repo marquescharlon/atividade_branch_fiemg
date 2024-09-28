@@ -29,18 +29,17 @@ if (int.TryParse(Console.ReadLine(), out qtdJogoInformada))
         if (int.TryParse(Console.ReadLine(), out qtdDezenaInformada))
         {
             if (qtdDezenaInformada < 6 || qtdDezenaInformada > 15){
-                    Console.WriteLine("A quantidade de dezenas deve ser pelo menos 6 e no máximo 15");
+                    Console.WriteLine("A quantidade de dezenas deve ser pelo menos 6 e no máximo 15!");
                     repetir = true;
             }
             else{
-                Console.WriteLine();
-                for (qtdJogo = 1; qtdJogoInformada <= qtdJogoInformada; qtdJogo--)
+                for (int qtdJogo = 1; qtdJogo <= qtdJogoInformada; qtdJogo++)
                 {
-                    for (qtdDezena = 1; qtdDezena <= qtdDezenaInformada)
+                    for (int qtdDezena = 1; qtdDezena <= qtdDezenaInformada; qtdDezena++)
                     {
-
+                        
                     }
-                    escrever.WriteLine();
+                    
                 }
                 Console.WriteLine();
                 Console.ForegroundColor = ConsoleColor.Yellow;

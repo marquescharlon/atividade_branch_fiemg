@@ -55,14 +55,14 @@ if (int.TryParse(Console.ReadLine(), out qtdJogoInformada))
                 repetir = true;
 
             }
+        }
         else
             {
                 repetir = true;
                 Console.WriteLine("Número inválido!");
             }
-        }
-        //while (repetir == true);
-    }
+    }while (repetir == true);
+
 }
 else
         Console.WriteLine("Número inválido!");

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\projetos\\atividade_branch_fiemg\\MegaSena.csproj": {}
+    "C:\\Users\\leona\\Documentos\\Dev\\GitHub\\atividade_branch_fiemg\\MegaSena.csproj": {}
   },
   "projects": {
-    "C:\\projetos\\atividade_branch_fiemg\\MegaSena.csproj": {
+    "C:\\Users\\leona\\Documentos\\Dev\\GitHub\\atividade_branch_fiemg\\MegaSena.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projetos\\atividade_branch_fiemg\\MegaSena.csproj",
+        "projectUniqueName": "C:\\Users\\leona\\Documentos\\Dev\\GitHub\\atividade_branch_fiemg\\MegaSena.csproj",
         "projectName": "MegaSena",
-        "projectPath": "C:\\projetos\\atividade_branch_fiemg\\MegaSena.csproj",
-        "packagesPath": "C:\\Users\\mrsantos\\.nuget\\packages\\",
-        "outputPath": "C:\\projetos\\atividade_branch_fiemg\\obj\\",
+        "projectPath": "C:\\Users\\leona\\Documentos\\Dev\\GitHub\\atividade_branch_fiemg\\MegaSena.csproj",
+        "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\leona\\Documentos\\Dev\\GitHub\\atividade_branch_fiemg\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mrsantos\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\leona\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -36,8 +36,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -53,12 +54,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.7, 8.0.7]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.7, 8.0.7]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.7, 8.0.7]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.7, 8.0.7]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-preview.7.24407.12/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

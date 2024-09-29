@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "hPQBdAD7wOE=",
+  "dgSpecHash": "o9i5JlUNwvc=",
   "success": true,
-  "projectFilePath": "C:\\projetos\\atividade_branch_fiemg\\MegaSena.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\leona\\Documentos\\Dev\\GitHub\\atividade_branch_fiemg\\MegaSena.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\leona\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.7\\microsoft.netcore.app.ref.8.0.7.nupkg.sha512",
+    "C:\\Users\\leona\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.7\\microsoft.windowsdesktop.app.ref.8.0.7.nupkg.sha512",
+    "C:\\Users\\leona\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.7\\microsoft.aspnetcore.app.ref.8.0.7.nupkg.sha512",
+    "C:\\Users\\leona\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.7\\microsoft.netcore.app.host.win-x64.8.0.7.nupkg.sha512"
+  ],
   "logs": []
 }

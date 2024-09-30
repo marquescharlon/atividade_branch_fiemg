@@ -17,11 +17,11 @@
             qtdDezenaInformada,
             qtdJogoInformada,
             qtdJogo;
-        
+
         decimal valorPremio,
-        valorPremio6,
-        valorPremio5,
-        valorPremio4;
+                valorPremio6,
+                valorPremio5,
+                valorPremio4;
 
         bool repetir = false;
 
@@ -35,12 +35,10 @@
                 Console.ResetColor();
             }
         } while (qtdJogoInformada < 1);
-
-        {
             do
             {
                 Console.Write("Informe uma quantidade de dezena entre 6 e 15: ");
-                if (TryParse(Console.ReadLine(), out qtdDezenaInformada))
+                if (int.TryParse(Console.ReadLine(), out qtdDezenaInformada))
                 {
                     if (qtdDezenaInformada < 6 || qtdDezenaInformada > 15)
                     {
@@ -58,7 +56,7 @@
                             {
                                 for (qtdDezena = 1; qtdDezena <= qtdDezenaInformada; qtdDezena++)
                                 {
-                                    numRandom = random.Next(1, 61);
+                                    int numRandom = random.Next(1, 61);
                                     if (qtdDezena != qtdDezenaInformada)
                                     {
                                         Console.Write($"{numRandom:D2}-");
@@ -111,7 +109,4 @@
             Console.WriteLine($"- Se acertou 5 dezenas: {valorPremio5:C}");
             Console.WriteLine($"- Se acertou 4 dezenas: {valorPremio4:C}");
 
-            // Solicitar o valor do prêmio
-            Console.Write("Informe o valor do prêmio: ");
-            if (decimal.TryParse(Console.ReadLine(), out valorPremio))
-    }
+            

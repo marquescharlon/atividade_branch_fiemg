@@ -1,4 +1,5 @@
 
+
 using System.IO;
 Console.Clear();
 
@@ -72,6 +73,7 @@ do
                         }
                     }
                 }
+
             }
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Yellow;
@@ -79,6 +81,7 @@ do
             Console.ResetColor();
             Console.WriteLine();
         }
+
     }
     else
     {
@@ -110,3 +113,4 @@ Console.ResetColor();
 Console.WriteLine($"- {valorPremio6Dzn:C} distribuídos entre quem acertar 6 dezenas;");
 Console.WriteLine($"- {valorPremio5Dzn:C} distribuídos entre quem acertar 5 dezenas;");
 Console.WriteLine($"- {valorPremio4Dzn:C} distribuídos entre quem acertar 4 dezenas.");
+

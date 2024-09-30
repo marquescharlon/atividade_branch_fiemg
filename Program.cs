@@ -6,8 +6,6 @@ internal class Program
     {
         Console.Clear();
 
-        int largura = 50; // Ajuste a largura do cabeçalho conforme necessário
-
         Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("=".PadLeft(50, '='));
         Console.WriteLine("Atividade 13 - Jogo da Mega-Sena");
@@ -59,7 +57,7 @@ internal class Program
                                 escrever.WriteLine();
                                 Console.WriteLine();
                             }
-                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.ForegroundColor = ConsoleColor.Green;
                             Console.WriteLine("Jogos gerados e salvos no arquivo 'jogos-mega-sena.txt'.\n");
                             Console.ResetColor();
                         }

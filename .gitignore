@@ -397,5 +397,10 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
-bin/*
-obj/*
+
+git rm --cached bin
+git rm --cached obj
+
+bin/
+obj/
+

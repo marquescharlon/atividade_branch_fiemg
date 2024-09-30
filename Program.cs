@@ -75,7 +75,7 @@
 
                         Console.WriteLine();
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine("Jogo(s) gerado(s) e salvo(s) no arquivo 'jogos-mega-sena.txt'.");
+                        Console.WriteLine("Jogo gerado(s) e salvo(s) no arquivo 'jogos-mega-sena.txt'.");
                         Console.ResetColor();
                         Console.WriteLine();
                     }
@@ -105,11 +105,11 @@
 
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("Distribuição do prêmio:");
+            Console.WriteLine("VALORES DOS PRÊMIOS");
             Console.ResetColor();
-            Console.WriteLine($"- {valorPremio6Dzn:C} distribuídos entre quem acertar 6 dezenas;");
-            Console.WriteLine($"- {valorPremio5Dzn:C} distribuídos entre quem acertar 5 dezenas;");
-            Console.WriteLine($"- {valorPremio4Dzn:C} distribuídos entre quem acertar 4 dezenas.");
+            Console.WriteLine($"- Se acertou 6 dezenas: {valorPremio6Dzn:C}");
+            Console.WriteLine($"- Se acertou 5 dezenas: {valorPremio5Dzn:C}");
+            Console.WriteLine($"- Se acertou 4 dezenas: {valorPremio4Dzn:C}");
 
             // Solicitar o valor do prêmio
             Console.Write("Informe o valor do prêmio: ");

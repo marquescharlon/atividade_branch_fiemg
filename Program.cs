@@ -1,8 +1,5 @@
-﻿using System.IO;
-        Console.Clear();
-
-        string titulo = "Atividade 13 - Jogo da Mega-Sena";
-        int largura = titulo.Length;
+using System.IO;
+Console.Clear();
 
 string titulo = "Atividade 13 - Jogo da Mega-Sena";
 int largura = titulo.Length;
@@ -14,6 +11,7 @@ Console.WriteLine("=".PadLeft(largura, '='));
 Console.ResetColor();
 
 Random random = new Random();
+
 
 int qtdDezena,
     qtdDezenaInformada,
@@ -111,4 +109,3 @@ Console.ResetColor();
 Console.WriteLine($"- {valorPremio6Dzn:C} distribuídos entre quem acertar 6 dezenas;");
 Console.WriteLine($"- {valorPremio5Dzn:C} distribuídos entre quem acertar 5 dezenas;");
 Console.WriteLine($"- {valorPremio4Dzn:C} distribuídos entre quem acertar 4 dezenas.");
-

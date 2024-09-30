@@ -1,76 +1,72 @@
 ﻿using System.IO;
 
 Console.Clear();
-
-int largura = 50; // Ajuste a largura do cabeçalho conforme necessário
-
+//int largura = 50; // Ajuste a largura do cabeçalho conforme necessário
 Console.ForegroundColor = ConsoleColor.Yellow;
 Console.WriteLine("=".PadLeft(37, '='));
 Console.WriteLine("Atividade 13 - Jogo da Mega-Sena");
 Console.WriteLine("=".PadLeft(37, '='));
 Console.ResetColor();
-
-
 Random random = new Random();
 
-int qtdDezena
-    qtdDezenaInformada;
+        int qtdDezena, qtdDezenaInformada = 0, qtdJogo, qtdJogoInformada = 0;
+        decimal valorPremio;
+        bool repetir = true;
 
-decimal valorPremio;
-
-bool repetir = "";
-
-Console.Write("Deseja realizar quantos jogos: ");
-if (int.Parse(Console.ReadLine(), out qtdJogoInformada))
-{
-    do
-    {
-        Console.Write("Informar a quantidade de dezena: ");
-        if (int.Parse(Console.ReadLine(), out qtdDezenaInformada))
+        // Solicitar a quantidade de jogos
+        Console.Write("Deseja realizar quantos jogos: ");
+        if (int.TryParse(Console.ReadLine(), out qtdJogoInformada))
         {
-            if (qtdDezenaInformada < 6 || qtdDezenaInformada > 15)
-                    //repetir = true;
-                else
-                        repetir = false;
-
-            if (repetir == false)
+            do
             {
-                Console.WriteLine();
-                for (qtdJogo = 1; qtdJogoInformada <= qtdJogoInformada; qtdJogo--)
+                // Solicitar a quantidade de dezenas
+                Console.Write("Informar a quantidade de dezenas: ");
+                if (int.TryParse(Console.ReadLine(), out qtdDezenaInformada))
                 {
-                    for (qtdDezena = 1; qtdDezena <= qtdDezenaInformada)
+                    if (qtdDezenaInformada < 6 || qtdDezenaInformada > 15)
                     {
-
+                        Console.WriteLine("Quantidade de dezenas inválida.");
                     }
-                    escrever.WriteLine();
+                    else
+                    {
+                        repetir = false;
+                        Console.WriteLine();
+                        for (qtdJogo = 1; qtdJogo <= qtdJogoInformada; qtdJogo++)
+                        {
+                            for (qtdDezena = 1; qtdDezena <= qtdDezenaInformada; qtdDezena++)
+                            {
+                                int numero = random.Next(1, 61); // Números de 1 a 60
+                                Console.Write(numero + " ");
+                            }
+                            Console.WriteLine();
+                        }
+
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("Jogos gerados e salvos no arquivo 'jogos-mega-sena.txt'.\n");
+                        Console.ResetColor();
+                    }
                 }
-                Console.WriteLine();
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("Jogos gerados e salvos no arquivo 'jogos-mega-sena.txt'.\n");
-                Console.ResetColor();
+                else
+                {
+                    Console.WriteLine("Número inválido!");
+                }
+            } while (repetir == true);
+
+            // Solicitar o valor do prêmio
+            Console.Write("Informe o valor do prêmio: ");
+            if (decimal.TryParse(Console.ReadLine(), out valorPremio))
+            {
+                Console.WriteLine($"Valor do prêmio informado: {valorPremio:F2}");
             }
             else
             {
-                Console.WriteLine("Quantidade dezena menor que 6");
-                repetir = true;
-
-            }
-        else
-            {
-                repetir = true;
-                Console.WriteLine("Número inválido!");
+                Console.WriteLine("Valor do prêmio inválido.");
             }
         }
-        //while (repetir == true);
-    }
-else
+        else
+        {
+            Console.WriteLine("Número inválido!");
+        }
+    
 
-        Console.WriteLine("Número inválido!");
-}
-
-// Solicitar o valor do prêmio
-
-Console.Write("Informe o valor do prêmio: ");
-if (decimal.TryParse(Console.ReadLine(), out valorPremio))
-{
 

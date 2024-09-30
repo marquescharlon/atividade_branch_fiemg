@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Luiz\\.nuget\\packages\\": {}
+    "C:\\Users\\Alunos\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Luiz\\Documents\\GITHUB\\atividade_branch_fiemg\\MegaSena.csproj",
+      "projectUniqueName": "C:\\Users\\Alunos\\Music\\luizmanha\\atividade_branch_fiemg\\MegaSena.csproj",
       "projectName": "MegaSena",
-      "projectPath": "C:\\Users\\Luiz\\Documents\\GITHUB\\atividade_branch_fiemg\\MegaSena.csproj",
-      "packagesPath": "C:\\Users\\Luiz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Luiz\\Documents\\GITHUB\\atividade_branch_fiemg\\obj\\",
+      "projectPath": "C:\\Users\\Alunos\\Music\\luizmanha\\atividade_branch_fiemg\\MegaSena.csproj",
+      "packagesPath": "C:\\Users\\Alunos\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Alunos\\Music\\luizmanha\\atividade_branch_fiemg\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Luiz\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Alunos\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"

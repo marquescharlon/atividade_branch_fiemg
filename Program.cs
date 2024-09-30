@@ -17,6 +17,7 @@ using (StreamWriter escrever = new StreamWriter("jogos-mega-sena.txt"))
 
     int qtdDezenaInformada;
     bool repetir = true;
+    //asfubafafafaf
 
     Console.Write("Deseja realizar quantos jogos: ");
     if (int.TryParse(Console.ReadLine(), out int qtdJogoInformada))

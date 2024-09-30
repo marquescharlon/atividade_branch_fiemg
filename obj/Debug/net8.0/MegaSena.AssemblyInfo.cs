@@ -13,11 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MegaSena")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f62366ff0470facb7f4673163b3e221d161a6669")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d150b2c59e067b64cea8e3b389abdcb4dc78d0c")]
->>>>>>> feature/ead
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1412903fb1c00909a0bd9e8723f9dd81d671ba0")]
 [assembly: System.Reflection.AssemblyProductAttribute("MegaSena")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MegaSena")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

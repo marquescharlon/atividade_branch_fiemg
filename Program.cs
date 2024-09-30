@@ -93,3 +93,12 @@ Console.Write("10% do prêmio para quem acertar 6 dezenas: R$" + premio4.ToSting
 else
 {
     Console.Write("Valor do Prêmio inválido! ");
+}
+    }
+    else
+    {
+    Console.Write("Número de jogos inválido! ");
+    }
+}
+}
+    

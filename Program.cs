@@ -69,8 +69,7 @@ else
 }
 
 // Solicitar o valor do prêmio
-
 Console.Write("Informe o valor do prêmio: ");
 if (decimal.TryParse(Console.ReadLine(), out valorPremio))
-{
+
 

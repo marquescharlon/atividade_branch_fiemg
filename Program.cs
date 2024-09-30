@@ -2,7 +2,7 @@
 
 internal class Program
 {
-    private static void Main(string[] args)
+    private static void Main()
     {
         Console.Clear();
 
@@ -89,7 +89,7 @@ internal class Program
         Console.WriteLine("Distribuição do prêmio");
         Console.WriteLine("=".PadLeft(50, '='));
         Console.ResetColor();
-
+        
         Console.WriteLine("Acertou as 6 dezenas: 75%\nAcertou 5 dezenas: 15%\nAcertou 4 dezenas: 10%");
     }
 }

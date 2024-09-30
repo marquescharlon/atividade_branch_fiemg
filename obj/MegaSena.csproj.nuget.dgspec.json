@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\projetos\\atividade_branch_fiemg\\MegaSena.csproj": {}
+    "C:\\Users\\Alunos\\OneDrive\\Documentos\\Gabriel ferreira\\atividade_branch_fiemg\\MegaSena.csproj": {}
   },
   "projects": {
-    "C:\\projetos\\atividade_branch_fiemg\\MegaSena.csproj": {
+    "C:\\Users\\Alunos\\OneDrive\\Documentos\\Gabriel ferreira\\atividade_branch_fiemg\\MegaSena.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projetos\\atividade_branch_fiemg\\MegaSena.csproj",
+        "projectUniqueName": "C:\\Users\\Alunos\\OneDrive\\Documentos\\Gabriel ferreira\\atividade_branch_fiemg\\MegaSena.csproj",
         "projectName": "MegaSena",
-        "projectPath": "C:\\projetos\\atividade_branch_fiemg\\MegaSena.csproj",
-        "packagesPath": "C:\\Users\\mrsantos\\.nuget\\packages\\",
-        "outputPath": "C:\\projetos\\atividade_branch_fiemg\\obj\\",
+        "projectPath": "C:\\Users\\Alunos\\OneDrive\\Documentos\\Gabriel ferreira\\atividade_branch_fiemg\\MegaSena.csproj",
+        "packagesPath": "C:\\Users\\Alunos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alunos\\OneDrive\\Documentos\\Gabriel ferreira\\atividade_branch_fiemg\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mrsantos\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Alunos\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"

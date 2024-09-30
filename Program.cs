@@ -68,17 +68,19 @@ if (int.Parse(Console.ReadLine(), out qtdJogoInformada))
                 Console.WriteLine("Jogos gerados e salvos no arquivo 'jogos-mega-sena.txt'.\n");
                 Console.ResetColor();
             }
+    }
             else
             {
                 Console.WriteLine("Número inválido!");
                 repetir = true
             }
-    }while (repetir);
+        } while (repetir);
         }
         else
         {
             Console.WriteLine("Número inválido!");
         }
+
 
 // Solicitar o valor do prêmio
 
@@ -93,5 +95,4 @@ else
 {
     Console.WriteLine("Valor do prêmio inválido!");
 }
-
-
+{

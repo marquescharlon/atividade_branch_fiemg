@@ -1,5 +1,5 @@
 ﻿using System.IO;
-
+//a
 using (StreamWriter escrever = new StreamWriter("jogos-mega-sena.txt"))
 {
     Console.Clear();

@@ -50,7 +50,7 @@ class Program
                                 Console.Write($"{numeroSorteado:D2} ");
                                 if(qtdDezena < qtdDezenaInformada)
                                 {
-                                Console.Write("-");
+                                Console.Write(" - ");
                             }
                             }
                             Console.WriteLine();

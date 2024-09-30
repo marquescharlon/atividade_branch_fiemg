@@ -23,7 +23,7 @@ int qtdDezena, // adicionado a virgula
 decimal valorPremio;
 
 bool repetir = false; //corrigindo de string para bool e adicionando o false
-
+ returntwo:
 Console.Write("Deseja realizar quantos jogos: ");
 if (int.TryParse(Console.ReadLine(), out qtdJogoInformada))//corrigindo e adicionando TryParse
 {
@@ -48,7 +48,7 @@ if (int.TryParse(Console.ReadLine(), out qtdJogoInformada))//corrigindo e adicio
                 using (StreamWriter escrever = new StreamWriter("jogos-mega-sena.txt"))
                 {
                     for (qtdJogo = 1; qtdJogo <= qtdJogoInformada; qtdJogo++)
-                    {                                                                                                          
+                    {
                         for (qtdDezena = 1; qtdDezena <= qtdDezenaInformada; qtdDezena++)
                         {
                             dezenas = random.Next(1, 61);
@@ -88,11 +88,25 @@ if (int.TryParse(Console.ReadLine(), out qtdJogoInformada))//corrigindo e adicio
 else
 {
     Console.WriteLine("Número inválido!");
+    goto returntwo;//adicionando loop de validação
 }
 
 // Solicitar o valor do prêmio
 
-// Console.Write("Informe o valor do prêmio: ");
-// if (decimal.TryParse(Console.ReadLine(), out valorPremio))
-// {
+    returnone:
+Console.Write("Informe o valor do prêmio: ");
+if (decimal.TryParse(Console.ReadLine(), out valorPremio))
+{
+    decimal valpremio6dez = valorPremio * 0.75m;
+    decimal valpremio5dez = valorPremio * 0.15m;
+    decimal valpremio4dez = valorPremio * 0.10m;
+    Console.WriteLine($"{valpremio6dez}-valor para quem acertar 6 dezenas ");
+    Console.WriteLine($"{valpremio5dez}-valor para quem acertar 5 dezenas ");
+    Console.WriteLine($"{valpremio4dez}-valor para quem acertar 4 dezenas ");
+}    
+else
+{   
+    Console.WriteLine("numero invalido!");
+    goto returnone;//adicionando loop de validação
+}
 

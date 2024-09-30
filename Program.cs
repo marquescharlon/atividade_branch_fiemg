@@ -1,3 +1,4 @@
+
 using System.IO;
 Console.Clear();
 
@@ -11,8 +12,6 @@ Console.WriteLine("=".PadLeft(largura, '='));
 Console.ResetColor();
 
 Random random = new Random();
-
-
 
 int qtdDezena,
     qtdDezenaInformada,

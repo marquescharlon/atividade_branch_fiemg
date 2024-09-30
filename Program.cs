@@ -47,7 +47,7 @@ class Program
                             for (int qtdDezena = 1; qtdDezena <= qtdDezenaInformada; qtdDezena++)
                             {
                                 int numeroSorteado = random.Next(1, 61);
-                                Console.Write($"{numeroSorteado: D2} ");
+                                Console.Write($"{numeroSorteado:D2} ");
                                 if(qtdDezena < qtdDezenaInformada)
                                 {
                                 Console.Write("-");
@@ -64,7 +64,7 @@ class Program
                                 for (int qtdDezena = 1; qtdDezena <= qtdDezenaInformada; qtdDezena++)
                                 {
                                     int numeroSorteado = random.Next(1, 61);
-                                    escrever.Write($"{numeroSorteado} ");
+                                    escrever.Write($"{numeroSorteado:D2} ");
                                 }
                                 escrever.WriteLine();
                             }

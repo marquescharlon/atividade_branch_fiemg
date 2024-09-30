@@ -14,10 +14,10 @@
         Random random = new Random();
 
         int qtdDezena,
-            qtdDezenaInformada
-    qtdJogoInformada,
+            qtdDezenaInformada,
+            qtdJogoInformada,
             qtdJogo;
-
+        
         decimal valorPremio,
         valorPremio6,
         valorPremio5,
@@ -99,17 +99,17 @@
                 }
             } while (valorPremio <= 0);
 
-            valorPremio6Dzn = valorPremio * 0.75m;
-            valorPremio5Dzn = valorPremio * 0.15m;
-            valorPremio4Dzn = valorPremio * 0.10m;
+            valorPremio6 = valorPremio * 0.75m;
+            valorPremio5 = valorPremio * 0.15m;
+            valorPremio4 = valorPremio * 0.10m;
 
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("VALORES DOS PRÊMIOS");
             Console.ResetColor();
-            Console.WriteLine($"- Se acertou 6 dezenas: {valorPremio6Dzn:C}");
-            Console.WriteLine($"- Se acertou 5 dezenas: {valorPremio5Dzn:C}");
-            Console.WriteLine($"- Se acertou 4 dezenas: {valorPremio4Dzn:C}");
+            Console.WriteLine($"- Se acertou 6 dezenas: {valorPremio6:C}");
+            Console.WriteLine($"- Se acertou 5 dezenas: {valorPremio5:C}");
+            Console.WriteLine($"- Se acertou 4 dezenas: {valorPremio4:C}");
 
             // Solicitar o valor do prêmio
             Console.Write("Informe o valor do prêmio: ");

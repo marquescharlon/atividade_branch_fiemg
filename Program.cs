@@ -1,82 +1,111 @@
-﻿using System;
 using System.IO;
-using System.Collections.Generic;
-
 Console.Clear();
 
-int largura = 50; // Ajuste a largura do cabeçalho conforme necessário
+string titulo = "Atividade 13 - Jogo da Mega-Sena";
+int largura = titulo.Length;
 
 Console.ForegroundColor = ConsoleColor.Yellow;
-Console.WriteLine("=".PadLeft(37, '='));
-Console.WriteLine("Atividade 13 - Jogo da Mega-Sena");
-Console.WriteLine("=".PadLeft(37, '='));
+Console.WriteLine("=".PadLeft(largura, '='));
+Console.WriteLine(titulo);
+Console.WriteLine("=".PadLeft(largura, '='));
 Console.ResetColor();
 
 Random random = new Random();
 
-int qtdDezenaInformada, qtdJogoInformada;
-decimal valorPremio;
+
+int qtdDezena,
+    qtdDezenaInformada,
+    qtdJogo,
+    qtdJogoInformada,
+    numRandom;
+
+decimal valorPremio,
+        valorPremio6Dzn,
+        valorPremio5Dzn,
+        valorPremio4Dzn;
 
 bool repetir = true;
 
-Console.Write("Deseja realizar quantos jogos: ");
-if (int.TryParse(Console.ReadLine(), out qtdJogoInformada))
+do
 {
-    while (repetir)
+    Console.Write("Deseja realizar quantos jogos?: ");
+    if (!int.TryParse(Console.ReadLine(), out qtdJogoInformada) || qtdJogoInformada < 1)
     {
-        Console.Write("Informar a quantidade de dezenas (6 a 15): ");
-        if (int.TryParse(Console.ReadLine(), out qtdDezenaInformada))
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("Valor inválido. Tente novamente.");
+        Console.ResetColor();
+    }
+} while (qtdJogoInformada < 1);
+
+do
+{
+    Console.Write("Informe a quantidade de dezenas (entre 6 e 15): ");
+    if (int.TryParse(Console.ReadLine(), out qtdDezenaInformada))
+    {
+        if (qtdDezenaInformada < 6 || qtdDezenaInformada > 15)
         {
-            if (qtdDezenaInformada < 6 || qtdDezenaInformada > 15)
-            {
-                Console.WriteLine("Quantidade de dezenas deve estar entre 6 e 15.");
-            }
-            else
-            {
-                repetir = false; // Condição para sair do loop
-
-                // Gerar jogos
-                using (StreamWriter escrever = new StreamWriter("jogos-mega-sena.txt"))
-                {
-                    for (int qtdJogo = 1; qtdJogo <= qtdJogoInformada; qtdJogo++)
-                    {
-                        // Gerar as dezenas para o jogo
-                        var dezenas = new HashSet<int>();
-                        while (dezenas.Count < qtdDezenaInformada)
-                        {
-                            dezenas.Add(random.Next(1, 61)); // Números de 1 a 60
-                        }
-
-                        // Escrever no arquivo
-                        escrever.WriteLine($"Jogo {qtdJogo}: {string.Join(", ", dezenas)}");
-                    }
-                }
-
-                Console.WriteLine();
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("Jogos gerados e salvos no arquivo 'jogos-mega-sena.txt'.\n");
-                Console.ResetColor();
-            }
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("A quantidade de dezenas não pode ser menor que 6 ou maior que 15. Tente novamente.");
+            Console.ResetColor();
         }
         else
         {
-            Console.WriteLine("Número inválido!");
+            Console.WriteLine();
+            repetir = false;
+            using (StreamWriter escrever = new StreamWriter("jogos-mega-sena.txt"))
+            {
+                for (qtdJogo = 1; qtdJogo <= qtdJogoInformada; qtdJogo++)
+                {
+                    for (qtdDezena = 1; qtdDezena <= qtdDezenaInformada; qtdDezena++)
+                    {
+                        numRandom = random.Next(1, 61);
+                        if (qtdDezena != qtdDezenaInformada)
+                        {
+                            Console.Write($"{numRandom:D2}-");
+                            escrever.Write($"{numRandom:D2}-");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"{numRandom:D2}");
+                            escrever.WriteLine($"{numRandom:D2}");
+                        }
+                    }
+                }
+            }
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Jogo(s) gerado(s) e salvo(s) no arquivo 'jogos-mega-sena.txt'.");
+            Console.ResetColor();
+            Console.WriteLine();
         }
     }
-}
-else
-{
-    Console.WriteLine("Número inválido!");
-}
+    else
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("Valor inválido. Tente novamente.");
+        Console.ResetColor();
+    }
+} while (repetir);
 
-// Solicitar o valor do prêmio
-Console.Write("Informe o valor do prêmio: ");
-if (decimal.TryParse(Console.ReadLine(), out valorPremio))
+do
 {
-    // Aqui você pode adicionar a lógica relacionada ao valor do prêmio, se necessário
-    Console.WriteLine($"Valor do prêmio informado: {valorPremio:C}");
-}
-else
-{
-    Console.WriteLine("Número inválido!");
-}
+    Console.Write("Informe o valor do prêmio: ");
+    if (!decimal.TryParse(Console.ReadLine(), out valorPremio) || valorPremio <= 0)
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("Valor inválido. Tente novamente.");
+        Console.ResetColor();
+    }
+} while (valorPremio <= 0);
+
+valorPremio6Dzn = valorPremio * 0.75m;
+valorPremio5Dzn = valorPremio * 0.15m;
+valorPremio4Dzn = valorPremio * 0.10m;
+
+Console.WriteLine();
+Console.ForegroundColor = ConsoleColor.Yellow;
+Console.WriteLine("Distribuição do prêmio:");
+Console.ResetColor();
+Console.WriteLine($"- {valorPremio6Dzn:C} distribuídos entre quem acertar 6 dezenas;");
+Console.WriteLine($"- {valorPremio5Dzn:C} distribuídos entre quem acertar 5 dezenas;");
+Console.WriteLine($"- {valorPremio4Dzn:C} distribuídos entre quem acertar 4 dezenas.");

@@ -16,35 +16,50 @@ Random random = new Random();
 
 int qtdDezena, // adicionado a virgula
     qtdJogoInformada, // declarando a variavel
-    qtdDezenaInformada;
+    qtdDezenaInformada,//declarando a variavel
+    qtdJogo,//declarando a variavel
+    dezenas;//declarando a variavel
 
 decimal valorPremio;
 
 bool repetir = false; //corrigindo de string para bool e adicionando o false
 
 Console.Write("Deseja realizar quantos jogos: ");
-if (int.Parse(Console.ReadLine(), out qtdJogoInformada))
+if (int.TryParse(Console.ReadLine(), out qtdJogoInformada))//corrigindo e adicionando TryParse
 {
     do
     {
         Console.Write("Informar a quantidade de dezena: ");
-        if (int.Parse(Console.ReadLine(), out qtdDezenaInformada))
+        if (int.TryParse(Console.ReadLine(), out qtdDezenaInformada))//corrigindo e adicionando TryParse
         {
-            if (qtdDezenaInformada < 6 || qtdDezenaInformada > 15)
-                    //repetir = true;
-                else
-                        repetir = false;
+            if (qtdDezenaInformada < 6 && qtdDezenaInformada > 15)//troca de sinais e do e/ou
+            {
+                    repetir = true;//adicionando as chaves
+            }
+             else
+            {
+                        repetir = false;//adicionando as chaves
+            }            
 
             if (repetir == false)
             {
                 Console.WriteLine();
-                for (qtdJogo = 1; qtdJogoInformada <= qtdJogoInformada; qtdJogo--)
+                for (qtdJogo = 1; qtdJogo <= qtdJogoInformada; qtdJogo++)
                 {
-                    for (qtdDezena = 1; qtdDezena <= qtdDezenaInformada)
+                    for (qtdDezena = 1; qtdDezena <= qtdDezenaInformada; qtdDezena++)
                     {
+                         dezenas = random.Next(1, 61);
+                         if (qtdDezena == qtdDezenaInformada)//impressão das dezenas com -
+					{
+						Console.Write($"{dezenas:D2}\n");
+					}
+					else
+					{
+						Console.Write($"{dezenas:D2}-");
+					}
 
                     }
-                    escrever.WriteLine();
+                    //escrever.WriteLine();
                 }
                 Console.WriteLine();
                 Console.ForegroundColor = ConsoleColor.Yellow;
@@ -57,22 +72,23 @@ if (int.Parse(Console.ReadLine(), out qtdJogoInformada))
                 repetir = true;
 
             }
+        } //adicionando as chaves   
         else
             {
                 repetir = true;
                 Console.WriteLine("Número inválido!");
             }
         }
-        //while (repetir == true);
+        while (repetir == true);//descomentando while
     }
 else
-
-        Console.WriteLine("Número inválido!");
+{
+    Console.WriteLine("Número inválido!");
 }
 
 // Solicitar o valor do prêmio
 
-Console.Write("Informe o valor do prêmio: ");
-if (decimal.TryParse(Console.ReadLine(), out valorPremio))
-{
+// Console.Write("Informe o valor do prêmio: ");
+// if (decimal.TryParse(Console.ReadLine(), out valorPremio))
+// {
 

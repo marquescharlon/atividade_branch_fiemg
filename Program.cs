@@ -1,8 +1,13 @@
-﻿using System;
-public class Program
-{
-public static void Main()
-{
+﻿ using System.IO;
+ Console.Clear();
+
+ int largura = 50;
+
+ Console.ForegroundColor = ConsoleColor.Yellow;
+ Console.WriteLine("=".PadLeft(37, '='));
+ Console.WriteLine("Atividade 13 - Jogo da Mega-Sena");
+ Console.WriteLine("=".PadLeft(37, '='));
+ Console.ResetColor();
 
   Random random = new Random();
   Console.Write("Insira a quantidade de jogos que você deseja fazer: ");
@@ -41,7 +46,7 @@ public static void Main()
             dezenasSorteadas += "-";
         }
     }
-    Console.WriteLine("Jogo " + (j + 1) + ":" + dezenasSorteadas);
+    Console.WriteLine("Jogo " + (j + 1) + ": " + dezenasSorteadas);
  }
 
    decimal premio6 = valordopremio * 0.75m;
@@ -51,5 +56,3 @@ public static void Main()
    Console.WriteLine("75% do prêmio para quem acertar 6 dezenas: R$" + premio6);
    Console.WriteLine("15% do prêmio para quem acertar 5 dezenas: R$" + premio5);
    Console.WriteLine("10% do prêmio para quem acertar 4 dezenas: R$" + premio4);
-}
-}

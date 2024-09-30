@@ -1,5 +1,5 @@
-
 using System.IO;
+
 Console.Clear();
 
 string titulo = "Atividade 13 - Jogo da Mega-Sena";
@@ -7,11 +7,14 @@ int largura = titulo.Length;
 
 Console.ForegroundColor = ConsoleColor.Yellow;
 Console.WriteLine("=".PadLeft(largura, '='));
+
 Console.WriteLine(titulo);
+
 Console.WriteLine("=".PadLeft(largura, '='));
 Console.ResetColor();
 
 Random random = new Random();
+
 
 int qtdDezena,
     qtdDezenaInformada,
@@ -24,7 +27,9 @@ decimal valorPremio,
         valorPremio5Dzn,
         valorPremio4Dzn;
 
+
 bool repetir = true;
+
 
 do
 
@@ -37,6 +42,7 @@ do
         Console.ResetColor();
     }
 } while (qtdJogoInformada < 1);
+
 
 do
 {
@@ -55,6 +61,7 @@ do
             repetir = false;
             using (StreamWriter escrever = new StreamWriter("jogos-mega-sena.txt"))
             {
+
                 for (qtdJogo = 1; qtdJogo <= qtdJogoInformada; qtdJogo++)
                 {
                     for (qtdDezena = 1; qtdDezena <= qtdDezenaInformada; qtdDezena++)
@@ -110,3 +117,4 @@ Console.ResetColor();
 Console.WriteLine($"- {valorPremio6Dzn:C} distribuídos entre quem acertar 6 dezenas;");
 Console.WriteLine($"- {valorPremio5Dzn:C} distribuídos entre quem acertar 5 dezenas;");
 Console.WriteLine($"- {valorPremio4Dzn:C} distribuídos entre quem acertar 4 dezenas.");
+

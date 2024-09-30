@@ -1,6 +1,8 @@
 
+
 using System.IO;
 Console.Clear();
+
 
 string titulo = "Atividade 13 - Jogo da Mega-Sena";
 int largura = titulo.Length;
@@ -28,10 +30,12 @@ bool repetir = true;
 
 do
 
+
 {
     Console.Write("Deseja realizar quantos jogos?: ");
     if (!int.TryParse(Console.ReadLine(), out qtdJogoInformada) || qtdJogoInformada < 1)
     {
+
         Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("Valor inválido. Tente novamente.");
         Console.ResetColor();
@@ -98,6 +102,7 @@ do
         Console.ResetColor();
     }
 } while (valorPremio <= 0);
+
 
 valorPremio6Dzn = valorPremio * 0.75m;
 valorPremio5Dzn = valorPremio * 0.15m;

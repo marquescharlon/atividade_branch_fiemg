@@ -87,3 +87,9 @@ decimal premio6 = valorPremio * 0.75m;
 decimal premio5 = valorPremio * 0.15m;
 decimal premio4 = valorPremio * 0.10m;
 Console.Write("75% do prêmio para quem acertar 6 dezenas: R$" + premio6.ToSting("C"));
+Console.Write("15% do prêmio para quem acertar 6 dezenas: R$" + premio5.ToSting("C"));
+Console.Write("10% do prêmio para quem acertar 6 dezenas: R$" + premio4.ToSting("C"));
+}
+else
+{
+    Console.Write("Valor do Prêmio inválido! ");

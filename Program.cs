@@ -34,32 +34,36 @@ if (int.TryParse(Console.ReadLine(), out qtdJogoInformada))//corrigindo e adicio
         {
             if (qtdDezenaInformada < 6 && qtdDezenaInformada > 15)//troca de sinais e do e/ou
             {
-                    repetir = true;//adicionando as chaves
+                repetir = true;//adicionando as chaves
             }
-             else
+            else
             {
-                        repetir = false;//adicionando as chaves
-            }            
+                repetir = false;//adicionando as chaves
+            }
 
             if (repetir == false)
             {
                 Console.WriteLine();
-                for (qtdJogo = 1; qtdJogo <= qtdJogoInformada; qtdJogo++)
+                //salvar o jogo/bolão em arquivo .TXT
+                using (StreamWriter escrever = new StreamWriter("jogos-mega-sena.txt"))
                 {
-                    for (qtdDezena = 1; qtdDezena <= qtdDezenaInformada; qtdDezena++)
-                    {
-                         dezenas = random.Next(1, 61);
-                         if (qtdDezena == qtdDezenaInformada)//impressão das dezenas com -
-					{
-						Console.Write($"{dezenas:D2}\n");
-					}
-					else
-					{
-						Console.Write($"{dezenas:D2}-");
-					}
-
+                    for (qtdJogo = 1; qtdJogo <= qtdJogoInformada; qtdJogo++)
+                    {                                                                                                          
+                        for (qtdDezena = 1; qtdDezena <= qtdDezenaInformada; qtdDezena++)
+                        {
+                            dezenas = random.Next(1, 61);
+                            if (qtdDezena == qtdDezenaInformada)//impressão das dezenas com -
+                            {
+                                Console.Write($"{dezenas:D2}\n");
+                                escrever.Write($"{dezenas:D2}\n");
+                            }
+                            else
+                            {
+                                Console.Write($"{dezenas:D2}-");
+                                escrever.Write($"{dezenas:D2}-");
+                            }
+                        }
                     }
-                    //escrever.WriteLine();
                 }
                 Console.WriteLine();
                 Console.ForegroundColor = ConsoleColor.Yellow;
@@ -74,13 +78,13 @@ if (int.TryParse(Console.ReadLine(), out qtdJogoInformada))//corrigindo e adicio
             }
         } //adicionando as chaves   
         else
-            {
-                repetir = true;
-                Console.WriteLine("Número inválido!");
-            }
+        {
+            repetir = true;
+            Console.WriteLine("Número inválido!");
         }
-        while (repetir == true);//descomentando while
     }
+    while (repetir == true);//descomentando while
+}
 else
 {
     Console.WriteLine("Número inválido!");

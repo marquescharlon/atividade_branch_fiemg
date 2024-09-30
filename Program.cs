@@ -1,5 +1,9 @@
 ﻿using System.IO;
+<<<<<<< HEAD
 
+=======
+//a
+>>>>>>> feature/ead
 using (StreamWriter escrever = new StreamWriter("jogos-mega-sena.txt"))
 {
     Console.Clear();

@@ -1,4 +1,4 @@
-﻿using System.IO;
+using System.IO;
 
 Console.Clear();
 
@@ -13,7 +13,7 @@ Console.ResetColor();
 
 Random random = new Random();
 
-int qtdDezena
+int qtdDezena;
     qtdDezenaInformada;
 
 decimal valorPremio;
@@ -21,7 +21,7 @@ decimal valorPremio;
 bool repetir = "";
 
 Console.Write("Deseja realizar quantos jogos: ");
-if (int.Parse(Console.ReadLine(), out qtdJogoInformada))
+if (int.Parse(Console.ReadLine(), out int qtdJogoInformada))
 {
     do
     {

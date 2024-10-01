@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 
 Console.Clear();
@@ -64,22 +64,22 @@ if (int.Parse(Console.ReadLine(), out qtdJogoInformada))
                 }
             }
 
-                Console.ForegroundColor = ConsoleColor.Yellow;
+                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("Jogos gerados e salvos no arquivo 'jogos-mega-sena.txt'.\n");
                 Console.ResetColor();
             }
-    }
-            else
-            {
-                Console.WriteLine("Número inválido!");
-                repetir = true
-            }
-        } while (repetir);
         }
         else
         {
-            Console.WriteLine("Número inválido!");
+            Console.WriteLine("Numero invalido!");
+            repetir = true;
         }
+    } while (repetir);
+}
+else
+{
+    Console.WriteLine("Numero invalido!");
+}
 
 
 // Solicitar o valor do prêmio
@@ -95,4 +95,4 @@ else
 {
     Console.WriteLine("Valor do prêmio inválido!");
 }
-{
+

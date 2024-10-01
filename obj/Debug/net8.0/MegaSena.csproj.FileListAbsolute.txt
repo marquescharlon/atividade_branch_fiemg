@@ -21,3 +21,10 @@ C:\Users\Alunos\OneDrive\Documentos\Gabriel ferreira\atividade_branch_fiemg\obj\
 C:\Users\Alunos\OneDrive\Documentos\Gabriel ferreira\atividade_branch_fiemg\obj\Debug\net8.0\MegaSena.dll
 C:\Users\Alunos\OneDrive\Documentos\Gabriel ferreira\atividade_branch_fiemg\obj\Debug\net8.0\refint\MegaSena.dll
 C:\Users\Alunos\OneDrive\Documentos\Gabriel ferreira\atividade_branch_fiemg\obj\Debug\net8.0\MegaSena.pdb
+C:\Users\Alunos\OneDrive\Documentos\Gabriel ferreira\atividade_branch_fiemg\bin\Debug\net8.0\MegaSena.exe
+C:\Users\Alunos\OneDrive\Documentos\Gabriel ferreira\atividade_branch_fiemg\bin\Debug\net8.0\MegaSena.deps.json
+C:\Users\Alunos\OneDrive\Documentos\Gabriel ferreira\atividade_branch_fiemg\bin\Debug\net8.0\MegaSena.runtimeconfig.json
+C:\Users\Alunos\OneDrive\Documentos\Gabriel ferreira\atividade_branch_fiemg\bin\Debug\net8.0\MegaSena.dll
+C:\Users\Alunos\OneDrive\Documentos\Gabriel ferreira\atividade_branch_fiemg\bin\Debug\net8.0\MegaSena.pdb
+C:\Users\Alunos\OneDrive\Documentos\Gabriel ferreira\atividade_branch_fiemg\obj\Debug\net8.0\MegaSena.genruntimeconfig.cache
+C:\Users\Alunos\OneDrive\Documentos\Gabriel ferreira\atividade_branch_fiemg\obj\Debug\net8.0\ref\MegaSena.dll

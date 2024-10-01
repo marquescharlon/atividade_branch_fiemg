@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MegaSena")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1ec021090d5c2198d3a1f0fbea99049925e6b7e8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f77b38f81808fc9740693a779f3a01aec526a26")]
 [assembly: System.Reflection.AssemblyProductAttribute("MegaSena")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MegaSena")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

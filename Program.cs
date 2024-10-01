@@ -6,12 +6,14 @@ string titulo = "Atividade 13 - Jogo da Mega-Sena";
 int largura = titulo.Length;
 
 Console.ForegroundColor = ConsoleColor.Yellow;
+
 Console.WriteLine("=".PadLeft(largura, '='));
 Console.WriteLine(titulo);
-Console.WriteLine("=".PadLeft(largura, '='));
+Console.WriteLine("=".PadLeft(largura, '='))
 Console.ResetColor();
 
 Random random = new Random();
+
 
 int qtdDezena,
     qtdDezenaInformada,
@@ -24,14 +26,18 @@ decimal valorPremio,
         valorPremio5Dzn,
         valorPremio4Dzn;
 
+
 bool repetir = true;
 
+
 do
+
 
 {
     Console.Write("Deseja realizar quantos jogos?: ");
     if (!int.TryParse(Console.ReadLine(), out qtdJogoInformada) || qtdJogoInformada < 1)
     {
+
         Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("Valor inválido. Tente novamente.");
         Console.ResetColor();
@@ -88,8 +94,10 @@ do
     }
 } while (repetir);
 
+
 do
 {
+
     Console.Write("Informe o valor do prêmio: ");
     if (!decimal.TryParse(Console.ReadLine(), out valorPremio) || valorPremio <= 0)
     {
@@ -110,3 +118,4 @@ Console.ResetColor();
 Console.WriteLine($"- {valorPremio6Dzn:C} distribuídos entre quem acertar 6 dezenas;");
 Console.WriteLine($"- {valorPremio5Dzn:C} distribuídos entre quem acertar 5 dezenas;");
 Console.WriteLine($"- {valorPremio4Dzn:C} distribuídos entre quem acertar 4 dezenas.");
+

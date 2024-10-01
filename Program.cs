@@ -1,76 +1,58 @@
-﻿using System.IO;
+﻿ using System.IO;
+ Console.Clear();
 
-Console.Clear();
+ int largura = 50;
 
-int largura = 50; // Ajuste a largura do cabeçalho conforme necessário
+ Console.ForegroundColor = ConsoleColor.Yellow;
+ Console.WriteLine("=".PadLeft(37, '='));
+ Console.WriteLine("Atividade 13 - Jogo da Mega-Sena");
+ Console.WriteLine("=".PadLeft(37, '='));
+ Console.ResetColor();
 
-Console.ForegroundColor = ConsoleColor.Yellow;
-Console.WriteLine("=".PadLeft(37, '='));
-Console.WriteLine("Atividade 13 - Jogo da Mega-Sena");
-Console.WriteLine("=".PadLeft(37, '='));
-Console.ResetColor();
+  Random random = new Random();
+  Console.Write("Insira a quantidade de jogos que você deseja fazer: ");
+  int quantidadeJogos = int.Parse(Console.ReadLine());
+  int quantidadeDeDezenas;
 
+  Console.Write("Informe o valor do prêmio: ");
+  decimal valordopremio = decimal.Parse(Console.ReadLine());
 
-Random random = new Random();
+  do
+  {
+    Console.Write("Informe a quantidade de dezenas (entre 6 e 15): ");
+    quantidadeDeDezenas = int.Parse(Console.ReadLine());
 
-int qtdDezena
-    qtdDezenaInformada;
-
-decimal valorPremio;
-
-bool repetir = "";
-
-Console.Write("Deseja realizar quantos jogos: ");
-if (int.Parse(Console.ReadLine(), out qtdJogoInformada))
-{
-    do
+    if (quantidadeDeDezenas < 6 || quantidadeDeDezenas > 15)
     {
-        Console.Write("Informar a quantidade de dezena: ");
-        if (int.Parse(Console.ReadLine(), out qtdDezenaInformada))
-        {
-            if (qtdDezenaInformada < 6 || qtdDezenaInformada > 15)
-                    //repetir = true;
-                else
-                        repetir = false;
-
-            if (repetir == false)
-            {
-                Console.WriteLine();
-                for (qtdJogo = 1; qtdJogoInformada <= qtdJogoInformada; qtdJogo--)
-                {
-                    for (qtdDezena = 1; qtdDezena <= qtdDezenaInformada)
-                    {
-
-                    }
-                    escrever.WriteLine();
-                }
-                Console.WriteLine();
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("Jogos gerados e salvos no arquivo 'jogos-mega-sena.txt'.\n");
-                Console.ResetColor();
-            }
-            else
-            {
-                Console.WriteLine("Quantidade dezena menor que 6");
-                repetir = true;
-
-            }
-        else
-            {
-                repetir = true;
-                Console.WriteLine("Número inválido!");
-            }
-        }
-        //while (repetir == true);
+        Console.Write("Quantidade inválida! A quantidade de dezenas deve ser maior que 6 ou menor que 15. ");
     }
-else
+ }
+ while (quantidadeDeDezenas < 6 || quantidadeDeDezenas > 15);
+ Console.WriteLine(quantidadeJogos + "Jogos de" + quantidadeDeDezenas + "dezenas: ");
+ for (int j = 0; j < quantidadeJogos; j++)
+ {
+    string dezenasSorteadas = "";
+    for (int i = 0; i < quantidadeDeDezenas; i++)
+    {
+        int numero;
+        do
+        {
+            numero = random.Next(1, 61);
+        }
+        while (dezenasSorteadas.Contains(numero.ToString("00")));
+        dezenasSorteadas += numero.ToString("00");
+        if(i < quantidadeDeDezenas - 1)
+        {
+            dezenasSorteadas += "-";
+        }
+    }
+    Console.WriteLine("Jogo " + (j + 1) + ": " + dezenasSorteadas);
+ }
 
-        Console.WriteLine("Número inválido!");
-}
+   decimal premio6 = valordopremio * 0.75m;
+   decimal premio5 = valordopremio * 0.15m;
+   decimal premio4 = valordopremio * 0.10m;
 
-// Solicitar o valor do prêmio
-
-Console.Write("Informe o valor do prêmio: ");
-if (decimal.TryParse(Console.ReadLine(), out valorPremio))
-{
-
+   Console.WriteLine("75% do prêmio para quem acertar 6 dezenas: R$" + premio6);
+   Console.WriteLine("15% do prêmio para quem acertar 5 dezenas: R$" + premio5);
+   Console.WriteLine("10% do prêmio para quem acertar 4 dezenas: R$" + premio4);

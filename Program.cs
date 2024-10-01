@@ -50,7 +50,7 @@ using (StreamWriter escrever = new StreamWriter("jogos-mega-sena.txt"))
                                 if (numerosSorteados.Add(num))
                                 {
                                     Console.Write($"-{num} ");
-                                    escrever.Write($"{num}");
+                                    escrever.Write($"-{num} ");
                                 }
                             }
                             Console.WriteLine();

@@ -14,13 +14,11 @@ Console.ResetColor();
 
 double valor;
 Random baseRandom = new Random();
-		Start:
-			 
+		Start:		 
 		Console.WriteLine("Entre com a quantidade dos jogos:");
 		if (int.TryParse(Console.ReadLine(), out int jogos) && jogos > 0)
 		{
-			Start1:
-				
+			Start1:			
 			Console.WriteLine("Entre com a quantidade das dezenas:");
 			if (int.TryParse(Console.ReadLine(), out int dezenas) && (dezenas > 5 && dezenas < 16))
 			{
@@ -31,7 +29,6 @@ Random baseRandom = new Random();
                         {
                             if(i_==0)
                             {
-                            // 10 = jogo_[0,0]
                             jogos_[i, i_] = baseRandom.Next(1, 61);
                             }
                             else
@@ -47,14 +44,10 @@ Random baseRandom = new Random();
                                         if(jogos_[i, i1] == jogos_[i, i_])
                                         {
                                         repetir = true;
-                                        }
-                                        
-                                    }
-                                    
-                                    
+                                        }                                       
+                                    }                                  
                                 }while (repetir == true);   
-                            }
-                        
+                            }                       
                         }
                     }
                 Start3:
@@ -69,8 +62,7 @@ Random baseRandom = new Random();
                     Console.WriteLine("Valor invalido");
                 goto Start3;
                 }
-
-                   
+           
                 using (StreamWriter escrever = new StreamWriter("jogos-mega-sena.txt"))
 {
     escrever.WriteLine("=".PadLeft(largura, '='));

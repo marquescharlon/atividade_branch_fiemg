@@ -24,40 +24,43 @@ Random baseRandom = new Random();
 			Console.WriteLine("Entre com a quantidade das dezenas:");
 			if (int.TryParse(Console.ReadLine(), out int dezenas) && (dezenas > 5 && dezenas < 16))
 			{
-				int[, ] jogos_ = new int[jogos, dezenas];
-				for (int i = 0; i < jogos; i++)
-				{
-					for (int i_ = 0; i_ < dezenas; i_++)
-					{
-                        if(i_==0)
+                    int[, ] jogos_ = new int[jogos, dezenas];
+                    for (int i = 0; i < jogos; i++)
+                    {
+                        for (int i_ = 0; i_ < dezenas; i_++)
                         {
-                        // 10 = jogo_[0,0]
-						jogos_[i, i_] = baseRandom.Next(1, 61);
-                        }
-                        else
-                        {
-                            bool repetir = true;
-                            do
+                            if(i_==0)
                             {
-                                repetir =  false;
-                                int i_teste = 0;
-                                jogos_[i, i_] = baseRandom.Next(1, 61);
-                                for (int i1 = i_teste; i1 < i_; i1++)
+                            // 10 = jogo_[0,0]
+                            jogos_[i, i_] = baseRandom.Next(1, 61);
+                            }
+                            else
+                            {
+                                bool repetir = true;
+                                do
                                 {
-                                    if(jogos_[i, i1] == jogos_[i, i_])
+                                    repetir =  false;
+                                    int i_teste = 0;
+                                    jogos_[i, i_] = baseRandom.Next(1, 61);
+                                    for (int i1 = i_teste; i1 < i_; i1++)
                                     {
-                                    repetir = true;
+                                        if(jogos_[i, i1] == jogos_[i, i_])
+                                        {
+                                        repetir = true;
+                                        }
+                                        
                                     }
                                     
-                                }
-                                
-                                
-                            }while (repetir == true);   
-                            
+                                    
+                                }while (repetir == true);   
+                            }
+                        
                         }
-					}
-				}
-
+                    }
+                   
+                using (StreamWriter escrever = new StreamWriter("jogos-mega-sena.txt"))
+{
+    escrever.WriteLine("=".PadLeft(largura, '='));
 				for (int u = 0; u < jogos; u++)
 				{
 					for (int t = 0; t < dezenas; t++)
@@ -66,20 +69,29 @@ Random baseRandom = new Random();
 							if (t == 0)
 							{
 								Console.Write($"O jogo {(u + 1):D2} é = {jogos_[u, t]:D2}-");
+                                escrever.Write($"O jogo {(u + 1):D2} é = {jogos_[u, t]:D2}-");
 							}
 							else if (t < dezenas - 1)
 							{
 								Console.Write($"{jogos_[u, t]:D2}-");
+                                escrever.Write($"{jogos_[u, t]:D2}-");
 							}
 							else
 							{
 								Console.Write($"{jogos_[u, t]:D2}");
+                                escrever.Write($"{jogos_[u, t]:D2}");
 							}
 						
 					}
 
 					Console.WriteLine();
+                    escrever.WriteLine();
+                    
 				}
+                
+                escrever.WriteLine("=".PadLeft(largura, '='));
+                
+}                
 			}
 			else if (dezenas < 6)
 			{

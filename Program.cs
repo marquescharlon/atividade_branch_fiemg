@@ -33,29 +33,29 @@
                     }
                     else
                     {
-                        Console.WriteLine();
-                        for (int qtdJogo = 1; qtdJogo <= qtdJogoInformada; qtdJogo++)
+                    Console.WriteLine();
+                    for (int qtdJogo = 1; qtdJogo <= qtdJogoInformada; qtdJogo++)
+                    {
+                        Console.Write($"Jogo {qtdJogo}: ");
+                        for (int qtdDezena = 1; qtdDezena <= qtdDezenaInformada; qtdDezena++)
                         {
-                            Console.Write($"Jogo {qtdJogo}: ");
-                            for (int qtdDezena = 1; qtdDezena <= qtdDezenaInformada; qtdDezena++)
-                            {
-                                int numeroSorteado = random.Next(1, 61);
-                                Console.Write($"{numeroSorteado:D2} ");
-                                if(qtdDezena < qtdDezenaInformada)
-                                {
-                                Console.Write("- ");
-                            }
-                            }
+                            int numeroSorteado = random.Next(1, 61);
+                            Console.Write($"{numeroSorteado:D2} ");
+                            if(qtdDezena < qtdDezenaInformada)
+                        {
+                            Console.Write("- ");
+                        }
+                        }
                             Console.WriteLine();
                         }
 
                         using (StreamWriter escrever = new StreamWriter("jogos-mega-sena.txt", true))
                         {
                             for (int qtdJogo = 1; qtdJogo <= qtdJogoInformada; qtdJogo++)
+                        {
+                            escrever.Write($"Jogo {qtdJogo}: ");
+                            for (int qtdDezena = 1; qtdDezena <= qtdDezenaInformada; qtdDezena++)
                             {
-                                escrever.Write($"Jogo {qtdJogo}: ");
-                                for (int qtdDezena = 1; qtdDezena <= qtdDezenaInformada; qtdDezena++)
-                                {
                                     int numeroSorteado = random.Next(1, 61);
                                     escrever.Write($"{numeroSorteado:D2} ");
                                 }

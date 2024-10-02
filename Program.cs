@@ -1,4 +1,6 @@
 ﻿using System.IO;
+using System.Runtime.InteropServices;
+using System.Runtime.Serialization;
 
 Console.Clear();
 
@@ -27,7 +29,32 @@ Random baseRandom = new Random();
 				{
 					for (int i_ = 0; i_ < dezenas; i_++)
 					{
+                        if(i_==0)
+                        {
+                        // 10 = jogo_[0,0]
 						jogos_[i, i_] = baseRandom.Next(1, 61);
+                        }
+                        else
+                        {
+                            bool repetir = true;
+                            do
+                            {
+                                repetir =  false;
+                                int i_teste = 0;
+                                jogos_[i, i_] = baseRandom.Next(1, 61);
+                                for (int i1 = i_teste; i1 < i_; i1++)
+                                {
+                                    if(jogos_[i, i1] == jogos_[i, i_])
+                                    {
+                                    repetir = true;
+                                    }
+                                    
+                                }
+                                
+                                
+                            }while (repetir == true);   
+                            
+                        }
 					}
 				}
 

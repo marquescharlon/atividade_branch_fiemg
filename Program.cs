@@ -12,7 +12,7 @@ Console.WriteLine("Atividade 13 - Jogo da Mega-Sena");
 Console.WriteLine("=".PadLeft(largura, '='));
 Console.ResetColor();
 
-
+double valor;
 Random baseRandom = new Random();
 		Start:
 			 
@@ -57,6 +57,19 @@ Random baseRandom = new Random();
                         
                         }
                     }
+                Start3:
+                Console.WriteLine("Entre com o valor dos jogos: ");
+                if (double.TryParse(Console.ReadLine(), out valor) && valor > 0)
+                {
+                    Console.WriteLine($"Prêmio de R${Math.Round(valor * 0.75 ,2)} para 6 acertos, R${Math.Round(valor * 0.15 ,2)} para 5 acertos e R${Math.Round(valor * 0.10 ,2)} para 4 acertos.");
+                    Console.WriteLine();
+                }
+                else
+                {
+                    Console.WriteLine("Valor invalido");
+                goto Start3;
+                }
+
                    
                 using (StreamWriter escrever = new StreamWriter("jogos-mega-sena.txt"))
 {
@@ -92,6 +105,7 @@ Random baseRandom = new Random();
                 escrever.WriteLine("=".PadLeft(largura, '='));
                 
 }                
+
 			}
 			else if (dezenas < 6)
 			{
@@ -107,6 +121,7 @@ Random baseRandom = new Random();
 			{
 			    Console.WriteLine("Foi inserido um valor fora dos números inteiros ou um número negativo");
 			}
+
 		}
 		else
 		{
